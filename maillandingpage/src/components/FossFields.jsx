@@ -6,10 +6,11 @@ const FossFields = () => {
 
   const handleInvestNow = () => {
 
-    const contactSection = document.getElementById('contact');
-    if (contactSection) {
-      contactSection.scrollIntoView({ behavior: 'smooth' });
-    }
+    window.open("https://calendly.com/nate-9mwv", "_blank")
+    // const contactSection = document.getElementById('contact');
+    // if (contactSection) {
+    //   contactSection.scrollIntoView({ behavior: 'smooth' });
+    // }
 
   };
 
@@ -67,18 +68,20 @@ const FossFields = () => {
             <div className="space-y-2 mb-9">
               <div className="flex justify-between items-center bg-gradient-to-r from-[#9ECD54] ...  p-2 rounded">
                 <span className="text-sm">Asset Value</span>
-                <span className="font-semibold">$47,713 Cr</span>
+                <span className="font-semibold">$15.2m</span>
               </div>
               <div className="flex justify-between items-center bg-gradient-to-r from-[#9ECD54] ... p-2 rounded">
                 <span className="text-sm">IRR</span>
-                <span className="font-semibold">15.1%</span>
+                <span className="font-semibold">19.6%</span>
               </div>
               <div className="flex justify-between items-center bg-gradient-to-r from-[#9ECD54] ... p-2 rounded">
-                <span className="text-sm">Average Rental Yield</span>
-                <span className="font-semibold">9.5%</span>
+                <span className="text-sm">
+                  Targeted Equity
+                </span>
+                <span className="font-semibold">$5.6m</span>
               </div>
             </div>
-            <button onClick={handleInvestNow} className="bg-[#9ECD54] rounded-lg text-white w-full py-4 mb-8">
+            <button onClick={handleInvestNow} className="bg-[#1a94c2] rounded-lg text-white w-full py-4 mb-8">
               invest Now
             </button>
           </div>
@@ -101,10 +104,10 @@ const FossFields = () => {
               our vision and values.
             </p>
             <button onClick={handleInvestNow} className="bg-[#9ECD54] text-white py-2 px-8 rounded-lg border-none">
-              Invest Now
+              Schedule a call
             </button>
           </div>
-          <div data-aos="zoom-in"  data-aos-duration="1000" className="lg:w-1/2">
+          <div data-aos="zoom-in" data-aos-duration="1000" className="lg:w-1/2">
             <img src={img4} alt="" className="w-full" />
           </div>
         </div>
