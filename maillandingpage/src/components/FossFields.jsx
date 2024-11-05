@@ -88,12 +88,12 @@ const FossFields = () => {
               </div>
             </div>
             <button onClick={handleInvestNow} className="bg-[#1a94c2] rounded-lg text-white w-full py-4 mb-8">
-              invest Now
+              Schedule a call
             </button>
           </div>
         </div>
       </section>
-      <section className="px-8 md:px-20 lg:px-20 xl:px-36 py-24 font-inter">
+      <section className="px-8 md:px-20 lg:px-20 xl:px-36 py-24 font-inter bg-[#D6F0AD] bg-opacity-30">
         <div className="flex flex-col lg:flex-row gap-8 lg:items-center">
           <div className="lg:w-1/2 ">
             <h2 data-aos="fade-right" data-aos-duration="1000" className="text-4xl lg:text-4xl xl:text-5xl font-bold mb-4">
@@ -109,7 +109,7 @@ const FossFields = () => {
               goals in property investment. Meet our team and learn more about
               our vision and values.
             </p>
-            <button onClick={handleInvestNow} className="bg-[#9ECD54] text-white py-2 px-8 rounded-lg border-none">
+            <button onClick={handleInvestNow} className="bg-[#1a94c2] text-white py-2 px-8 rounded-lg border-none">
               Schedule a call
             </button>
           </div>
