@@ -1,4 +1,4 @@
-import React, { useRef, useEffect} from "react";
+import React, { useRef, useEffect } from "react";
 import img5 from "../assets/Ellipse1.png";
 import img6 from "../assets/Ellipse 2.png";
 import img7 from "../assets/Ellipse3.png";
@@ -28,11 +28,15 @@ const ClientTestimonial = () => {
   return (
     <>
       <section className="px-8 md:px-20 lg:px-20 xl:px-36 py-24 bg-[#D6F0AD] bg-opacity-30 font-inter">
-        <h2 data-aos="fade-down" data-aos-duration="1000" className="text-4xl lg:text-4xl xl:text-5xl font-bold text-center mb-11">
+        <h2
+          data-aos="fade-down"
+          data-aos-duration="1000"
+          className="text-4xl lg:text-4xl xl:text-5xl font-bold text-center mb-11"
+        >
           Client <span className="text-[#9ECD54]">Testimonial</span>
         </h2>
 
-        <div className="md:hidden sm:flex items-center justify-between mb-24">
+        <div className="md:hidden sm:flex items-center justify-between mb-12">
           <Swiper
             modules={[Pagination, Autoplay, Navigation]}
             autoplay={{ delay: 3000 }}
@@ -44,57 +48,29 @@ const ClientTestimonial = () => {
             className="flex justify-center"
           >
             <SwiperSlide className="flex justify-center">
-              <div className="bg-[#9ECD54] py-14 px-9 rounded-lg">
-                <p className="text-4xl lg:text-4xl xl:text-5xl mb-5 text-white font-bold font-inter">
-                  "
-                </p>
-                <p className="px-4 text-white mb-8">
-                  OHHHH Thanks god !!!! Finally there is someone making it for
-                  me to use on my projects. Love ya{" "}
-                </p>
-                <div className="border-t-4 rounded border-[#668832] flex gap-4 pt-3">
-                  <img src={img5} alt="" className="rounded-full" />
-                  <div className="">
-                    <h3 className="text-white">Hohn Williams</h3>
-                    <p>Texas</p>
-                  </div>
-                </div>
+              <div className=" py-7 px-9 rounded-lg">
+                <iframe
+                  src="https://www.youtube.com/embed/odbNvZsXYHg?si=G4FoWoUpXaGgQ5BY"
+                  title="YouTube video player"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerpolicy="strict-origin-when-cross-origin"
+                  allowfullscreen
+                  className="h-56"
+                ></iframe>
               </div>
             </SwiperSlide>
             <SwiperSlide className="flex justify-center">
-              <div className="bg-[#9ECD54] py-14 px-9 rounded-lg">
-                <p className="text-4xl lg:text-4xl xl:text-5xl mb-5 text-white font-bold">
-                  "
-                </p>
-                <p className="px-4 text-white mb-8">
-                  OHHHH Thanks god !!!! Finally there is someone making it for
-                  me to use on my projects. Love ya{" "}
-                </p>
-                <div className="border-t-4 rounded border-[#668832] flex gap-4 pt-3">
-                  <img src={img6} alt="" className="rounded-full" />
-                  <div className="">
-                    <h3 className="text-white">Hohn Williams</h3>
-                    <p>Texas</p>
-                  </div>
-                </div>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide className="flex justify-center">
-              <div className="bg-[#9ECD54] py-14 px-9 rounded-lg">
-                <p className="text-4xl lg:text-4xl xl:text-5xl mb-5 text-white font-bold">
-                  "
-                </p>
-                <p className="px-4 text-white mb-8">
-                  OHHHH Thanks god !!!! Finally there is someone making it for
-                  me to use on my projects. Love ya{" "}
-                </p>
-                <div className="border-t-4 rounded border-[#668832] flex gap-4 pt-3">
-                  <img src={img7} alt="" className="rounded-full" />
-                  <div className="">
-                    <h3 className="text-white">Jade Will</h3>
-                    <p>Florida</p>
-                  </div>
-                </div>
+              <div className=" py-7 px-9 rounded-lg">
+                <iframe
+                  src="https://www.youtube.com/embed/0q3I9x-YZ5I?si=WsL-LySgoKr3raAc"
+                  title="YouTube video player"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerpolicy="strict-origin-when-cross-origin"
+                  allowfullscreen
+                  className="h-56"
+                ></iframe>
               </div>
             </SwiperSlide>
           </Swiper>
@@ -113,54 +89,28 @@ const ClientTestimonial = () => {
             </button>
           </div>
         </div>
-        <div className="hidden md:grid grid-cols-2 lg:grid-cols-3 gap-8 ">
-          <div data-aos="flip-left" data-aos-duration="1000" className="bg-[#9ECD54] py-14 px-9 rounded-lg">
-            <p className="text-4xl lg:text-4xl xl:text-5xl mb-5 text-white font-bold font-inter">
-              "
-            </p>
-            <p className="px-4 text-white mb-8">
-              OHHHH Thanks god !!!! Finally there is someone making it for me to
-              use on my projects. Love ya{" "}
-            </p>
-            <div className="border-t-4 rounded border-[#668832] flex gap-4 pt-3">
-              <img src={img5} alt="" className="rounded-full" />
-              <div className="">
-                <h3 className="text-white">Hohn Williams</h3>
-                <p>Texas</p>
-              </div>
-            </div>
+        <div className="hidden md:grid grid-cols-2 lg:gap-8 ">
+          <div className="py-14 px-9 rounded-lg">
+            <iframe
+              src="https://www.youtube.com/embed/odbNvZsXYHg?si=G4FoWoUpXaGgQ5BY"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+              className="w-full sm:h-80"
+            ></iframe>
           </div>
-          <div data-aos="flip-right" data-aos-duration="1000" className="bg-[#9ECD54] py-14 px-9 rounded-lg">
-            <p className="text-4xl lg:text-4xl xl:text-5xl mb-5 text-white font-bold">
-              "
-            </p>
-            <p className="px-4 text-white mb-8">
-              OHHHH Thanks god !!!! Finally there is someone making it for me to
-              use on my projects. Love ya{" "}
-            </p>
-            <div className="border-t-4 rounded border-[#668832] flex gap-4 pt-3">
-              <img src={img6} alt="" className="rounded-full" />
-              <div className="">
-                <h3 className="text-white">Hohn Williams</h3>
-                <p>Texas</p>
-              </div>
-            </div>
-          </div>
-          <div data-aos="flip-left" data-aos-duration="1000" className="bg-[#9ECD54] py-14 px-9 rounded-lg">
-            <p className="text-4xl lg:text-4xl xl:text-5xl mb-5 text-white font-bold">
-              "
-            </p>
-            <p className="px-4 text-white mb-8">
-              OHHHH Thanks god !!!! Finally there is someone making it for me to
-              use on my projects. Love ya{" "}
-            </p>
-            <div className="border-t-4 rounded border-[#668832] flex gap-4 pt-3">
-              <img src={img7} alt="" className="rounded-full" />
-              <div className="">
-                <h3 className="text-white">Jade Will</h3>
-                <p>Florida</p>
-              </div>
-            </div>
+          <div className="py-14 px-9 rounded-lg">
+            <iframe
+              src="https://www.youtube.com/embed/0q3I9x-YZ5I?si=WsL-LySgoKr3raAc"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+              className="w-full sm:h-80"
+            ></iframe>
           </div>
         </div>
       </section>

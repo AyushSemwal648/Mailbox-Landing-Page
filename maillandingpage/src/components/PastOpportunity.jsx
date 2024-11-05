@@ -1,10 +1,7 @@
-import React, { useRef , useEffect } from "react";
+import React, { useRef, useEffect } from "react";
 import img9 from "../assets/image12.png";
 import img10 from "../assets/image13.png";
 import img11 from "../assets/image14.png";
-import img12 from "../assets/image15.png";
-import img13 from "../assets/image16.png";
-import img14 from "../assets/image17.png";
 import location from "../assets/location.svg.png";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay } from "swiper/modules";
@@ -20,19 +17,19 @@ const PastOpportunity = () => {
   const prevRef = useRef(null);
   const nextRef = useRef(null);
 
-  
-
-  
-
   return (
     <>
       <section className="px-10 md:px-20 lg:px-20 xl:px-36 py-24 font-inter ">
-        <h2 data-aos="fade-down" data-aos-duration="1000" className="text-center text-4xl lg:text-4xl xl:text-5xl font-bold mb-12">
+        <h2
+          data-aos="fade-down"
+          data-aos-duration="1000"
+          className="text-center text-4xl lg:text-4xl xl:text-5xl font-bold mb-12"
+        >
           Past <span className="text-[#9ECD54]">Opportunities</span>
         </h2>
 
         {/* for Small screen*/}
-        <div className=" lg:hidden   md:flex items-center  justify-between mb-24 ">
+        <div className=" lg:hidden   md:flex items-center  justify-between">
           <button
             ref={prevRef}
             className="hidden border-black bg-black border rounded-full w-24 h-10 md:flex justify-center items-center "
@@ -58,99 +55,104 @@ const PastOpportunity = () => {
           >
             <SwiperSlide className="flex justify-center">
               <div className="bg-white border rounded-lg md:w-2/3 ">
-                <img src={img9} alt="" className="mb-4 w-full" />
+                <div className="relative h-[40%] mb-4 rounded-t-lg ">
+                  <img src={img9} alt="" className="h-full w-full rounded-t-lg" />
+                  <p className="px-3 py-1 rounded-xl absolute top-2 right-4  bg-red-600 text-white">
+                    sold
+                  </p>
+                </div>
                 <div className="px-8 pb-4">
                   <h3 className="mb-2 text-xl font-medium">
                     Briarwood Reserve Phase 2
                   </h3>
                   <div className="flex gap-2 text-sm mb-9">
                     <img src={location} alt="" className="" />
-                    <p className="text-xs xl:text-base">
-                      132 Units - Jacksoniville, FL
-                    </p>
+
+                    <p className="text-xs xl:text-base">Sioux Falls, SD</p>
                   </div>
-                  <div className="space-y-2 mb-9">
+                  <div className="space-y-2 mb-4">
                     <div className="flex justify-between items-center bg-gradient-to-r from-[#9ECD54]/50  ...  p-2 rounded">
-                      <span className="text-sm">Acq, Price</span>
-                      <span className="font-semibold">$12.1 M</span>
+                      <span className="text-sm">Development Price </span>
+                      <span className="font-semibold">$11.6M</span>
                     </div>
                     <div className="flex justify-between items-center bg-gradient-to-r from-[#9ECD54]/50  ... p-2 rounded">
-                      <span className="text-sm">Sale Price</span>
-                      <span className="font-semibold">$17.9 M</span>
+                      <span className="text-sm">Units</span>
+                      <span className="font-semibold">60</span>
                     </div>
                     <div className="flex justify-between items-center  bg-gradient-to-r  from-[#9ECD54]/50  ... p-2 rounded">
-                      <span className="text-sm">Units</span>
-                      <span className="font-semibold">138</span>
+                      <span className="text-sm">Development end</span>
+                      <span className="font-semibold">Q2 2024</span>
                     </div>
-                  </div>
-                  <div className="border-t-8 border-[#9ECD54] rounded pt-3">
-                    <p className="font-bold"> Oct-2021</p>
                   </div>
                 </div>
               </div>
             </SwiperSlide>
             <SwiperSlide className="flex justify-center">
               <div className="bg-white border rounded-lg font-inter md:w-2/3">
-                <img src={img10} alt="" className="mb-4 w-full" />
+              <div className="relative h-[40%] mb-4 rounded-t-lg">
+              <img src={img10} alt="" className="h-full w-full rounded-t-lg" />
+              <p className="px-3 py-1 rounded-xl absolute top-2 right-4  bg-red-600 text-white">
+                sold
+              </p>
+            </div>
                 <div className="px-8 pb-4">
                   <h3 className="mb-2 text-xl font-medium">
-                    Equinox at Knight
+                    The Blue On Lorraine
                   </h3>
                   <div className="flex gap-2 text-sm mb-9">
                     <img src={location} alt="" className="" />
-                    <p>Atlanta, GA</p>
+                    <p>Sioux Falls, SD</p>
                   </div>
-                  <div className="space-y-2 mb-9">
+                  <div className="space-y-2 mb-4">
                     <div className="flex justify-between items-center bg-gradient-to-r from-[#9ECD54]/50 ...  p-2 rounded ">
-                      <span className="text-sm">Acq, Price</span>
-                      <span className="font-semibold">$23.9 M</span>
-                    </div>
-                    <div className="flex justify-between items-center bg-gradient-to-r from-[#9ECD54]/50 ... p-2 rounded ">
-                      <span className="text-sm">Sale Price</span>
-                      <span className="font-semibold">$39.5 M</span>
+                      <span className="text-sm">Development Price</span>
+                      <span className="font-semibold">$16.6M</span>
                     </div>
                     <div className="flex justify-between items-center bg-gradient-to-r from-[#9ECD54]/50 ... p-2 rounded ">
                       <span className="text-sm">Units</span>
-                      <span className="font-semibold">194</span>
+                      <span className="font-semibold">128</span>
                     </div>
-                  </div>
-                  <div className="border-t-8 border-[#9ECD54] rounded pt-3">
-                    <p className="font-bold"> Dec-2023</p>
+                    <div className="flex justify-between items-center bg-gradient-to-r from-[#9ECD54]/50 ... p-2 rounded ">
+                      <span className="text-sm">Development end</span>
+                      <span className="font-semibold">Q3 2023</span>
+                    </div>
                   </div>
                 </div>
               </div>
             </SwiperSlide>
             <SwiperSlide className="flex justify-center">
               <div className="bg-white border rounded-lg md:w-2/3">
-                <img src={img11} alt="" className="mb-4 w-full" />
+              <div className="relative h-[40%] mb-4 rounded-t-lg">
+              <img src={img11} alt="" className="h-full w-full rounded-t-lg" />
+              <p className="px-3 py-1 rounded-xl absolute top-2 right-4  bg-red-600 text-white">
+                sold
+              </p>
+            </div>
                 <div className="px-8 pb-4 ">
-                  <h3 className="mb-2 text-xl font-medium">Brighton Farms</h3>
+                  <h3 className="mb-2 text-xl font-medium">The Velthius</h3>
                   <div className="flex gap-2 text-sm mb-9">
                     <img src={location} alt="" className="" />
-                    <p>Atlanta, GA</p>
+                    <p>Sioux Falls, SD</p>
                   </div>
-                  <div className="space-y-2 mb-9">
+                  <div className="space-y-2 mb-4">
                     <div className="flex justify-between items-center bg-gradient-to-r from-[#9ECD54]/50 ...  p-2 rounded">
-                      <span className="text-sm">Development Cost</span>
-                      <span className="font-semibold">$16.6 M</span>
-                    </div>
-                    <div className="flex justify-between items-center bg-gradient-to-r from-[#9ECD54]/50 ... p-2 rounded">
-                      <span className="text-sm">Sale Price</span>
-                      <span className="font-semibold">-</span>
+                      <span className="text-sm">Development Price</span>
+                      <span className="font-semibold">$28.8M</span>
                     </div>
                     <div className="flex justify-between items-center bg-gradient-to-r from-[#9ECD54]/50 ... p-2 rounded">
                       <span className="text-sm">Units</span>
-                      <span className="font-semibold">128</span>
+                      <span className="font-semibold">144</span>
                     </div>
-                  </div>
-                  <div className="border-t-8 border-[#9ECD54] rounded pt-3">
-                    <p className="font-bold">Dev, Start: Oct-2021</p>
+                    <div className="flex justify-between items-center bg-gradient-to-r from-[#9ECD54]/50 ... p-2 rounded">
+                      <span className="text-sm">Development end </span>
+                      <span className="font-semibold">Q1 2024</span>
+                    </div>
                   </div>
                 </div>
               </div>
             </SwiperSlide>
           </Swiper>
-          
+
           <button
             ref={nextRef}
             className=" hidden border-black bg-black rounded-full w-24 h-10  md:flex justify-center items-center"
@@ -176,118 +178,105 @@ const PastOpportunity = () => {
 
         {/* for large screen */}
 
-        <div className="hidden lg:grid grid-cols-2 lg:grid-cols-3 gap-8 mb-24">
-          <div data-aos="flip-left" data-aos-duration="1000" className="bg-white border rounded-lg">
-            <img src={img9} alt="" className="mb-4 w-full" />
-            <div className="px-8 pb-4">
+        <div className="hidden lg:grid grid-cols-2 lg:grid-cols-3 gap-8">
+          <div
+            data-aos="flip-left"
+            data-aos-duration="1000"
+            className="bg-white border rounded-lg"
+          >
+            <div className="relative h-[40%] mb-4 rounded-t-lg">
+              <img src={img9} alt="" className="h-full w-full rounded-t-lg" />
+              <p className="px-3 py-1 rounded-xl absolute top-2 right-4  bg-red-600 text-white">
+                sold
+              </p>
+            </div>
+            <div className="px-8 pb-2">
               <h3 className="mb-2 text-xl font-medium">
                 Briarwood Reserve Phase 2
               </h3>
               <div className="flex gap-2 text-sm mb-9">
                 <img src={location} alt="" className="" />
-                <p className="text-xs xl:text-base">
-                  132 Units - Jacksoniville, FL
-                </p>
+                <p className="text-xs xl:text-base">Sioux Falls, SD</p>
               </div>
-              <div className="space-y-2 mb-9">
+              <div className="space-y-2 mb-4">
                 <div className="flex justify-between items-center bg-gradient-to-r from-[#9ECD54]/50  ...  p-2 rounded">
-                  <span className="text-sm">Acq, Price</span>
-                  <span className="font-semibold">$12.1 M</span>
-                </div>
-                <div className="flex justify-between items-center bg-gradient-to-r from-[#9ECD54]/50  ... p-2 rounded">
-                  <span className="text-sm">Sale Price</span>
-                  <span className="font-semibold">$17.9 M</span>
+                  <span className="text-sm">Development Price </span>
+                  <span className="font-semibold">$11.6M</span>
                 </div>
                 <div className="flex justify-between items-center bg-gradient-to-r from-[#9ECD54]/50  ... p-2 rounded">
                   <span className="text-sm">Units</span>
-                  <span className="font-semibold">138</span>
+                  <span className="font-semibold">60</span>
                 </div>
-              </div>
-              <div className="border-t-8 border-[#9ECD54] rounded pt-3">
-                <p className="font-bold"> Oct-2021</p>
+                <div className="flex justify-between items-center  bg-gradient-to-r  from-[#9ECD54]/50  ... p-2 rounded">
+                  <span className="text-sm">Development end</span>
+                  <span className="font-semibold">Q2 2024</span>
+                </div>
               </div>
             </div>
           </div>
-          <div data-aos="flip-right" data-aos-duration="1000" className="bg-white border rounded-lg font-inter">
-            <img src={img10} alt="" className="mb-4 w-full" />
-            <div className="px-8 pb-4">
-              <h3 className="mb-2 text-xl font-medium">Equinox at Knight</h3>
-              <div className="flex gap-2 text-sm mb-9">
-                <img src={location} alt="" className="" />
-                <p>Atlanta, GA</p>
-              </div>
-              <div className="space-y-2 mb-9">
-                <div className="flex justify-between items-center bg-gradient-to-r from-[#9ECD54]/50  ...  p-2 rounded">
-                  <span className="text-sm">Acq, Price</span>
-                  <span className="font-semibold">$23.9 M</span>
-                </div>
-                <div className="flex justify-between items-center bg-gradient-to-r from-[#9ECD54]/50  ... p-2 rounded">
-                  <span className="text-sm">Sale Price</span>
-                  <span className="font-semibold">$39.5 M</span>
-                </div>
-                <div className="flex justify-between items-center bg-gradient-to-r from-[#9ECD54]/50  ... p-2 rounded">
-                  <span className="text-sm">Units</span>
-                  <span className="font-semibold">194</span>
-                </div>
-              </div>
-              <div className="border-t-8 border-[#9ECD54] rounded pt-3">
-                <p className="font-bold"> Dec-2023</p>
-              </div>
+          <div
+            data-aos="flip-right"
+            data-aos-duration="1000"
+            className="bg-white border rounded-lg font-inter"
+          >
+            <div className="relative h-[40%] mb-4 rounded-t-lg">
+              <img src={img10} alt="" className="h-full w-full rounded-t-lg" />
+              <p className="px-3 py-1 rounded-xl absolute top-2 right-4  bg-red-600 text-white">
+                sold
+              </p>
             </div>
-          </div>
-          <div data-aos="flip-left" data-aos-duration="1000" className="bg-white border rounded-lg">
-            <img src={img11} alt="" className="mb-4 w-full" />
-            <div className="px-8 pb-4 ">
-              <h3 className="mb-2 text-xl font-medium">Brighton Farms</h3>
+            <div className="px-8 pb-2">
+              <h3 className="mb-2 text-xl font-medium">The Blue On Lorraine</h3>
               <div className="flex gap-2 text-sm mb-9">
                 <img src={location} alt="" className="" />
-                <p>Atlanta, GA</p>
+                <p>Sioux Falls, SD</p>
               </div>
-              <div className="space-y-2 mb-9">
-                <div className="flex justify-between items-center bg-gradient-to-r from-[#9ECD54]/50  ...  p-2 rounded">
-                  <span className="text-sm">Development Cost</span>
-                  <span className="font-semibold">$16.6 M</span>
+              <div className="space-y-2 mb-4">
+                <div className="flex justify-between items-center bg-gradient-to-r from-[#9ECD54]/50 ...  p-2 rounded ">
+                  <span className="text-sm">Development Price</span>
+                  <span className="font-semibold">$16.6M</span>
                 </div>
-                <div className="flex justify-between items-center bg-gradient-to-r from-[#9ECD54]/50  ... p-2 rounded">
-                  <span className="text-sm">Sale Price</span>
-                  <span className="font-semibold">-</span>
-                </div>
-                <div className="flex justify-between items-center bg-gradient-to-r from-[#9ECD54]/50  ... p-2 rounded">
+                <div className="flex justify-between items-center bg-gradient-to-r from-[#9ECD54]/50 ... p-2 rounded ">
                   <span className="text-sm">Units</span>
                   <span className="font-semibold">128</span>
                 </div>
-              </div>
-              <div className="border-t-8 border-[#9ECD54] rounded pt-3">
-                <p className="font-bold">Dev, Start: Oct-2021</p>
+                <div className="flex justify-between items-center bg-gradient-to-r from-[#9ECD54]/50 ... p-2 rounded ">
+                  <span className="text-sm">Development end</span>
+                  <span className="font-semibold">Q3 2023</span>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <div className=" font-inter">
-          <h2 data-aos="fade-down" data-aos-duration="1000" className="text-4xl lg:text-4xl xl:text-5xl font-bold text-center mb-9 ">
-            Foss Fields Hands-On <br />
-            <span className="text-[#9ECD54]">Leadership Team</span>
-          </h2>
-          <div className="grid grid-cols-2 lg:grid-cols-3 gap-8">
-            <div data-aos="zoom-in" data-aos-duration="1000" className="">
-              <img src={img12} alt="" className="w-full" />
-              <div className="text-center">
-                <h3 className="font-bold text-2xl">Dusten Hendrickson</h3>
-                <p className="text-lg">Developer, Mailbox Money </p>
-              </div>
+          <div
+            data-aos="flip-left"
+            data-aos-duration="1000"
+            className="bg-white border rounded-lg"
+          >
+            <div className="relative h-[40%] mb-4 rounded-t-lg">
+              <img src={img11} alt="" className="h-full w-full rounded-t-lg" />
+              <p className="px-3 py-1 rounded-xl absolute top-2 right-4  bg-red-600 text-white">
+                sold
+              </p>
             </div>
-            <div data-aos="zoom-in" data-aos-duration="1000" className="">
-              <img src={img13} alt="" className="w-full" />
-              <div className="text-center">
-                <h3 className="font-bold text-2xl">Omar Khan</h3>
-                <p className="text-lg">Principal, Boardwalk Wealth </p>
+            <div className="px-8 pb-2 ">
+              <h3 className="mb-2 text-xl font-medium">The Velthius</h3>
+              <div className="flex gap-2 text-sm mb-9">
+                <img src={location} alt="" className="" />
+                <p>Sioux Falls, SD</p>
               </div>
-            </div>
-            <div data-aos="zoom-in" data-aos-duration="1000" className="">
-              <img src={img14} alt="" className="w-full" />
-              <div className="text-center">
-                <h3 className="font-bold text-2xl">Caleb Veldhouse</h3>
-                <p className="text-lg">Construction, Veldhouse Companies </p>
+              <div className="space-y-2 mb-4">
+                <div className="flex justify-between items-center bg-gradient-to-r from-[#9ECD54]/50 ...  p-2 rounded">
+                  <span className="text-sm">Development Price</span>
+                  <span className="font-semibold">$28.8M</span>
+                </div>
+                <div className="flex justify-between items-center bg-gradient-to-r from-[#9ECD54]/50 ... p-2 rounded">
+                  <span className="text-sm">Units</span>
+                  <span className="font-semibold">144</span>
+                </div>
+                <div className="flex justify-between items-center bg-gradient-to-r from-[#9ECD54]/50 ... p-2 rounded">
+                  <span className="text-sm">Development end </span>
+                  <span className="font-semibold">Q1 2024</span>
+                </div>
               </div>
             </div>
           </div>

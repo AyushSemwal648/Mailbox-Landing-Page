@@ -7,7 +7,7 @@ export default {
   theme: {
     extend: {
       backgroundImage: {
-        "bg": "url(/src/assets/Mask group.png)",
+        "bg": "url(/src/assets/bg.webp)",
         "bg1": "url(/src/assets/img9.png)",
         "bg2": "url(/src/assets/img10.png)",
         "bg3": "url(/src/assets/img11.png)",

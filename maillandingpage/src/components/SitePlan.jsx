@@ -5,16 +5,12 @@ import img3 from "../assets/image 9.png";
 import img4 from "../assets/image 2.png";
 
 const SitePlan = () => {
-  const [isBlurred, setIsBlurred] = useState(true);
   const [isFormOpen, setIsFormOpen] = useState(false);
   const formRef = useRef(null); // Create a ref for the form container
-  const [selectedImage, setSelectedImage] = useState(img2);
+  const [selectedImage, setSelectedImage] = useState(null);
 
-  const handleImageClick = (image) => {
-    setSelectedImage(image);
-  };
-
-  const handleViewClick = () => {
+  const handleViewClick = (img) => {
+    setSelectedImage(img);
     setIsFormOpen(true);
   };
 
@@ -42,14 +38,11 @@ const SitePlan = () => {
   }, [isFormOpen]);
 
   const handleInvestNow = () => {
-
-    const contactSection = document.getElementById('contact');
+    const contactSection = document.getElementById("contact");
     if (contactSection) {
-      contactSection.scrollIntoView({ behavior: 'smooth' });
+      contactSection.scrollIntoView({ behavior: "smooth" });
     }
-
   };
-
 
   return (
     <section className="px-8 md:px-36 py-24 flex flex-col justify-center ">
@@ -62,22 +55,25 @@ const SitePlan = () => {
       </h2>
 
       {/* First Image */}
-      <div className="relative mb-10 flex items-center justify-center">
-        <img
-          src={img1}
-          alt="Site Plan 1"
-          className={`w-full h-auto ${isBlurred ? "blur-sm" : ""}`}
-        />
-        {isBlurred && (
-          <button
-            onClick={handleViewClick}
-            className="absolute  border border-black bg-[#222222] text-white py-2 px-5 flex items-center justify-center font-bold p-2 rounded"
-          >
-            View Site Plans
-          </button>
-        )}
+      <div className="flex flex-col lg:flex-row justify-between gap-8">
+        <div className="relative mb-10 flex items-center justify-center cursor-pointer">
+          <img
+            src={img1}
+            alt="Site Plan 1"
+            className={`w-full h-auto`}
+            onClick={() => handleViewClick(img1)}
+          />
+        </div>
+        <div className="relative mb-10 flex items-center justify-center cursor-pointer">
+          <img
+            src={img2}
+            alt="Site Plan 1"
+            className={`w-full h-auto`}
+            onClick={() => handleViewClick(img2)}
+          />
+        </div>
       </div>
-      <div className="sm:hidden flex gap-2 items-center">
+      {/* <div className="sm:hidden flex gap-2 items-center">
         <div className="flex flex-col gap-2">
           <img
             src={img2}
@@ -113,12 +109,11 @@ const SitePlan = () => {
               View Site Plans
             </button>
           )}
-          
         </div>
-      </div>
+      </div> */}
 
-      <div className="hidden sm:flex flex-col gap-8 sm:flex-row justify-center mb-4">
-        {/* Second Image */}
+      {/* <div className="hidden sm:flex flex-col gap-8 sm:flex-row justify-center mb-4">
+        
         <div className="relative text-center flex items-center justify-center">
           <img
             src={img2}
@@ -135,7 +130,6 @@ const SitePlan = () => {
           )}
         </div>
 
-        {/* Third Image */}
         <div className="relative text-center flex items-center justify-center">
           <img
             src={img3}
@@ -152,7 +146,7 @@ const SitePlan = () => {
           )}
         </div>
 
-        {/* Fourth Image */}
+       
         <div className="relative text-center flex items-center justify-center">
           <img
             src={img4}
@@ -168,66 +162,21 @@ const SitePlan = () => {
             </button>
           )}
         </div>
-      </div>
-      <button onClick={handleInvestNow} className="bg-[#9ECD54] text-white self-center py-2 px-8 rounded-lg border-none">
-            Invest Now
-          </button>
+      </div> */}
+      <button
+        onClick={handleInvestNow}
+        className="bg-[#9ECD54] text-white self-center py-2 px-8 rounded-lg border-none"
+      >
+        Invest Now
+      </button>
 
       {isFormOpen && (
         <div className="fixed z-50 inset-0 flex items-center justify-center bg-black bg-opacity-50">
-          
           <div
             ref={formRef}
             className="bg-white p-8 rounded shadow-lg w-[700px]"
           >
-            <h2 className="text-3xl mb-4 md:text-4xl lg:text-5xl font-inter font-bold text-center">
-              Please fill the form first
-            </h2>
-            <form className="flex flex-col" onSubmit={handleFormSubmit}>
-              <label className="text-lg font-medium">
-                Full Name<span className="text-red-500">*</span>
-              </label>
-              <input
-                type="text"
-                placeholder="Type Here"
-                required
-                className="mb-4 p-3 text-base border border-gray-300 rounded-lg"
-              />
-              
-              <label className="text-lg font-medium">
-                Email ID<span className="text-red-500">*</span>
-              </label>
-              <input
-                type="email"
-                placeholder="Type Here"
-                required
-                className="mb-4 p-3 text-base border border-gray-300 rounded-lg"
-              />
-              <label className="text-lg font-medium">
-                Phone Number<span className="text-red-500">*</span>
-              </label>
-              <input
-                type="tel"
-                placeholder="Phone Number"
-                required
-                className="mb-4 p-3 text-base border border-gray-300 rounded-lg"
-              />
-              <label className="text-lg font-medium">
-                City<span className="text-red-500">*</span>
-              </label>
-              <input
-                type="text"
-                placeholder="Type Here"
-                required
-                className="mb-4 p-3 text-base border border-gray-300 rounded-lg"
-              />
-              <button
-                type="submit"
-                className="bg-black text-white py-2 lg:py-3 px-8 rounded-lg border-none mt-4"
-              >
-                Submit
-              </button>
-            </form>
+            <img src={selectedImage} alt="Enlarged Site Plan" className="w-full h-auto rounded-lg" />
           </div>
         </div>
       )}

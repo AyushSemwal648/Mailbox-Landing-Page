@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <>
     <section className="px-8 md:px-20 lg:px-20 xl:px-36 py-12 bg-black font-inter">
-        <h2 data-aos="fade-down" data-aos-duration="1000" className="text-center text-white text-2xl mb-8 font-semibold">
+        <h2 data-aos="fade-down" data-aos-duration="1000" className="text-center text-[#9ECD54] text-2xl mb-8 font-semibold">
           DISCLOSURE OF INTERESTS:
         </h2>
         <p  className="text-white text-center mb-20">

@@ -4,40 +4,40 @@ import pdf from '../assets/pdf.pdf'
 
 const WhySioux = () => {
 
-  const [showModal, setShowModal] = useState(false); // State to control the modal visibility
+  // const [showModal, setShowModal] = useState(false); // State to control the modal visibility
   const formRef = useRef(null);
 
   const handleDownloadClick = () => {
-    setShowModal(true); // Show the form modal
-  };
-
-  // Function to handle form submission
-  const handleFormSubmit = (e) => {
-    e.preventDefault();
-    setShowModal(false); // Close the modal after submission
-
-    // Create an anchor element to trigger PDF download
     const link = document.createElement("a");
     link.href = pdf;
-    link.download = "Foss Fields Phase 1.pdf";
+    link.download = "Jefferson Reserve Phase II.pdf";
     link.click(); // Programmatically click the link to download the PDF
   };
 
-  useEffect(() => {
-    const handleClickOutside = (event) => {
-      if (formRef.current && !formRef.current.contains(event.target)) {
-        setShowModal(false);
-      }
-    };
+  // Function to handle form submission
+  // const handleFormSubmit = (e) => {
+  //   e.preventDefault();
+  //   setShowModal(false); // Close the modal after submission
 
-    if (showModal) {
-      document.addEventListener("mousedown", handleClickOutside);
-    }
+  //   // Create an anchor element to trigger PDF download
+    
+  // };
 
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
-  }, [showModal]);
+  // useEffect(() => {
+  //   const handleClickOutside = (event) => {
+  //     if (formRef.current && !formRef.current.contains(event.target)) {
+  //       setShowModal(false);
+  //     }
+  //   };
+
+  //   if (showModal) {
+  //     document.addEventListener("mousedown", handleClickOutside);
+  //   }
+
+  //   return () => {
+  //     document.removeEventListener("mousedown", handleClickOutside);
+  //   };
+  // }, [showModal]);
 
   return (
     <>
@@ -90,7 +90,7 @@ const WhySioux = () => {
           </div>
         </div>
 
-        {showModal && (
+        {/* {showModal && (
         <div className="modal fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
           <div ref={formRef} className="bg-white p-8 rounded-lg shadow-md w-11/12 md:w-1/3">
             <h2 className="text-xl font-bold mb-4">Download PDF Form</h2>
@@ -121,7 +121,7 @@ const WhySioux = () => {
             </form>
           </div>
         </div>
-      )}
+      )} */}
       
       </section>
     </>

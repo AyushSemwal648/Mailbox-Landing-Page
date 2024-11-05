@@ -14,7 +14,12 @@ const FossFields = () => {
 
   };
 
-
+  const handleminimuninvestment = () => {
+    const contactSection = document.getElementById("contact");
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
   return (
     <>
       <section className="px-8 md:px-20 lg:px-20 xl:px-36 py-24 bg-black flex flex-col lg:flex-row lg:items-center gap-10 font-inter">
@@ -24,7 +29,7 @@ const FossFields = () => {
             data-aos-duration="1000"
             className="text-white text-4xl lg:text-4xl xl:text-5xl font-bold"
           >
-            Foss Fields
+            Jefferson Reserve
           </h2>
           <h2
             data-aos="fade-right"
@@ -32,35 +37,36 @@ const FossFields = () => {
             data-aos-delay="500"
             className="text-[#9ECD54] text-4xl lg:text-4xl xl:text-5xl font-bold mb-9"
           >
-            Phase 1
+            Phase II
           </h2>
           <p className=" mb-6 text-white  md:text-lg">
-            <span className="font-medium ">Foss Fields Phase 1</span> is our
-            latest multifamily real estate investment opportunity created to
-            generate growth, income and tax efficiency for accredited investors.{" "}
+            <span className="font-medium ">Exclusive “Maximize Your Profits” Bonus</span> 
           </p>
           <p className="md:text-lg text-white mb-4">
-            Located in{" "}
-            <span className="text-[#9ECD54]">Sioux Falls, South Dakota</span>,
-            this 100-unit development phase (for a projected total of 508 units)
-            will capitalize on the region’s stellar economy: higher-than-average
-            personal incomes, low unemployment and rapid growth. Combined with
-            Boardwalk’s quick-lease construction model, unique risk management
-            framework, and discounted finance terms, early investor demand is
-            high.
+            <span className="font-medium">Investors in Jefferson Reserve Phase II gain access to three powerful wealth-boosting advantages:</span>,
+            <ul>
+              <li>1: Immediate depreciation write-offs</li>
+              <li>2: Instant tax credits from energy-efficient construction</li>
+              <li>3: Opportunity Zone deferral of capital gains from recent asset sales</li>
+            </ul>
           </p>
-          <button className="text-white bg-[#f20808] px-7 py-3 ">
+          <button className="text-white bg-[#f20808] px-7 py-3 " onClick={handleminimuninvestment}>
             Minimum investment starting from $50,000
           </button>
         </div>
         <div
           data-aos="zoom-in"
           data-aos-duration="1000"
-          className="bg-white rounded-lg"
+          className="bg-white rounded-lg lg:w-[40%] h-full"
         >
-          <img src={img3} alt="" className="mb-4 w-full" />
+          <div className="relative h-56 lg:h-48 w-full mb-4 rounded-t-lg">
+              <img src={img3} alt="" className="h-full w-full rounded-t-lg" />
+              <p className="px-3 py-1 rounded-xl absolute top-2 right-4  bg-[#9ECD54] text-white">
+                Ongoing
+              </p>
+            </div>
           <div className="px-8 ">
-            <h3 className="mb-2 text-xl font-medium">Foss Fields Phase 1</h3>
+            <h3 className="mb-2 text-xl font-medium">Jefferson Reserve Phase II</h3>
             <div className="flex gap-2 text-sm mb-9">
               <img src={location} alt="" className="" />
               <p>Sioux Falls, South Dakota</p>
@@ -91,7 +97,7 @@ const FossFields = () => {
         <div className="flex flex-col lg:flex-row gap-8 lg:items-center">
           <div className="lg:w-1/2 ">
             <h2 data-aos="fade-right" data-aos-duration="1000" className="text-4xl lg:text-4xl xl:text-5xl font-bold mb-4">
-              Provideing the Best
+              Providing the Best
               <br /> Real Estate{" "}
               <span className="text-[#9ECD54]">Sevices in the Industry</span>
             </h2>
