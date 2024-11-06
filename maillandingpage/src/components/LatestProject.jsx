@@ -41,7 +41,7 @@ const LatestProject = () => {
   // }, [showModal]);
 
   return (
-    <section className="px-8 md:px-20 lg:px-20 xl:px-36 py-9 bg-black font-inter">
+    <section className="px-8 md:px-20 lg:px-20 xl:px-36 py-9 bg-black font-inter overflow-hidden" >
         <div className="flex flex-col gap-4 sm:gap-0 sm:flex-row justify-between">
           <h2
             data-aos="fade-right"

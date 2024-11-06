@@ -27,7 +27,7 @@ const ClientTestimonial = () => {
 
   return (
     <>
-      <section className="px-8 md:px-20 lg:px-20 xl:px-36 py-24 bg-[#D6F0AD] bg-opacity-30 font-inter">
+      <section className="px-8 md:px-20 lg:px-20 xl:px-36 py-24 bg-[#D6F0AD] bg-opacity-30 font-inter overflow-hidden">
         <h2
           data-aos="fade-down"
           data-aos-duration="1000"

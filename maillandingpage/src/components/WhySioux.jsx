@@ -41,7 +41,7 @@ const WhySioux = () => {
 
   return (
     <>
-    <section className="px-8 md:px-20 lg:px-20 xl:px-36 py-24 bg-black font-inter">
+    <section className="px-8 md:px-20 lg:px-20 xl:px-36 py-24 bg-black font-inter overflow-hidden">
         <div className="md:flex justify-between mb-12">
           <h2 data-aos="fade-right" data-aos-duration="1000" className="text-4xl lg:text-4xl xl:text-5xl text-white font-bold mb-4 md:mb-0">
             Why <span className="text-[#9ECD54]">Sioux Falls?</span>

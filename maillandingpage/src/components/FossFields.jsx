@@ -22,7 +22,7 @@ const FossFields = () => {
   };
   return (
     <>
-      <section className="px-8 md:px-20 lg:px-20 xl:px-36 py-24 bg-black flex flex-col lg:flex-row lg:items-center gap-10 font-inter">
+      <section className="px-8 md:px-20 lg:px-20 xl:px-36 py-24 bg-black flex flex-col lg:flex-row lg:items-center gap-10 font-inter overflow-hidden">
         <div className="lg:w-2/3">
           <h2
             data-aos="fade-right"
@@ -93,7 +93,7 @@ const FossFields = () => {
           </div>
         </div>
       </section>
-      <section className="px-8 md:px-20 lg:px-20 xl:px-36 py-24 font-inter bg-[#D6F0AD] bg-opacity-30">
+      <section className="px-8 md:px-20 lg:px-20 xl:px-36 py-24 font-inter bg-[#D6F0AD] bg-opacity-30 overflow-hidden">
         <div className="flex flex-col lg:flex-row gap-8 lg:items-center">
           <div className="lg:w-1/2 ">
             <h2 data-aos="fade-right" data-aos-duration="1000" className="text-4xl lg:text-4xl xl:text-5xl font-bold mb-4">

@@ -46,7 +46,7 @@ const LandingPage = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowModal(true);
-    }, 5000); 
+    }, 5000);
 
     // Clean up the timer on component unmount
     return () => clearTimeout(timer);
@@ -66,87 +66,108 @@ const LandingPage = () => {
     }
   };
 
+  const handleschedule = () => {
+    window.open("https://calendly.com/nate-9mwv", "_blank");
+    // const contactSection = document.getElementById('contact');
+    // if (contactSection) {
+    //   contactSection.scrollIntoView({ behavior: 'smooth' });
+    // }
+  };
+
   return (
     <>
-    <div className="relative overflow-hidden">
-      <div className="header border-b border-[#9ECD54] sticky top-0 z-50 bg-black flex justify-between items-center w-full py-4 px-4 md:px-16">
-        <div className="logo text-xl font-bold flex items-center">
-          <img
-            src={logo}
-            alt="Mailbox Money"
-            className="w-[100px] md:h-auto md:w-auto"
-          />
-        </div>
-        <div className="actions flex gap-4">
-          <button
-            onClick={handleDownloadClick}
-            className="download hidden md:block bg-transparent border-none"
-          >
-            <img src={dwn} alt="Download PDF" />
-          </button>
-          <button
-            onClick={handleInvestNow}
-            className="invest bg-[#9ECD54] text-white py-1 md:py-2 px-3 md:px-8 rounded-lg border-none"
-          >
-            Invest Now
-          </button>
-        </div>
-      </div>
-      <HeroSection />
-      <section className="project bg-black py-14 px-8 md:px-20 lg:px-20 xl:px-36 font-inter">
-        <h2
-          data-aos="fade-right"
-          data-aos-duration="1000"
-          className="text-white text-3xl lg:text-4xl xl:text-5xl font-bold md:mb-3"
-        >
-          About <span className="text-[#9ECD54]">Projects</span>
-        </h2>
-        <ul className=" text-base text-white">
-          <li><span className="font-bold">Project: </span>96 unit second phase development (for a total of 180 units) in Sioux Falls, SD</li>
-          <li><span className="font-bold">Opportunity Zone: </span>Investors may use the sale of other assets to reinvest capital gains and defer taxes on those gains</li>
-          <li><span className="font-bold">Bonus Depreciation & Tax Credits: </span>Investors get 2024 and 2025 tax breaks: ~20% of their invested capital</li>
-        </ul>
-      </section>
-      <section className="md:px-20 px-8 lg:px-20 xl:px-36 py-14 font-inter">
-        <div className="md:flex justify-between items-center">
-          <div className=" mb-10 md:mb-0">
-            <h2
-              data-aos="fade-right"
-              data-aos-duration="1000"
-              className="text-4xl lg:text-4xl xl:text-5xl font-bold  "
+      <div className="relative">
+        <div className="header border-b border-[#9ECD54] sticky top-0 z-50 bg-black flex justify-between items-center w-full py-4 px-4 md:px-16">
+          <div className="logo text-xl font-bold flex items-center">
+            <img
+              src={logo}
+              alt="Mailbox Money"
+              className="w-[100px] md:h-auto md:w-auto"
+            />
+          </div>
+          <div className="actions flex gap-4">
+            <button
+              onClick={handleDownloadClick}
+              className="download hidden md:block bg-transparent border-none"
             >
-              Partner & <span className="text-[#9ECD54]">Team</span>
-            </h2>
-            <p className="text-xl text-[#4b4b4b]">
-              Collaborative Excellence : Driving Success
-            </p>
-          </div>
-          <div className="flex flex-col lg:flex-row gap-5  ">
-            <img
-              src={img1}
-              data-aos="flip-right"
-              data-aos-duration="1000"
-              alt=""
-              className="lg:w-[250px] xl:w-auto"
-            />
-            <img
-              src={img2}
-              alt=""
-              data-aos="flip-left"
-              data-aos-duration="1000"
-              className="lg:w-[250px] xl:w-auto"
-            />
+              <img src={dwn} alt="Download PDF" />
+            </button>
+            <button
+              onClick={handleInvestNow}
+              className="invest bg-[#9ECD54] text-white py-1 md:py-2 px-3 md:px-8 rounded-lg border-none"
+            >
+              Invest Now
+            </button>
           </div>
         </div>
-      </section>
-      <FossFields />
-      <PastOpportunity />
-      <Table/>
-      <WhySioux />
-      <ClientTestimonial />
-      <SitePlan />
-      {/* <Gallery /> */}
-      <div className=" px-8 md:px-36 py-24 font-inter bg-[#D6F0AD] bg-opacity-30">
+        <HeroSection />
+        <section className="project bg-black py-14 px-8 md:px-20 lg:px-20 xl:px-36 font-inter overflow-hidden">
+          <h2
+            data-aos="fade-right"
+            data-aos-duration="1000"
+            className="text-white text-3xl lg:text-4xl xl:text-5xl font-bold md:mb-3"
+          >
+            About <span className="text-[#9ECD54]">Projects</span>
+          </h2>
+          <ul className=" text-base text-white">
+            <li>
+              <span className="font-bold">Project: </span>96 unit second phase
+              development (for a total of 180 units) in Sioux Falls, SD
+            </li>
+            <li>
+              <span className="font-bold">Opportunity Zone: </span>Investors may
+              use the sale of other assets to reinvest capital gains and defer
+              taxes on those gains
+            </li>
+            <li>
+              <span className="font-bold">
+                Bonus Depreciation & Tax Credits:{" "}
+              </span>
+              Investors get 2024 and 2025 tax breaks: ~20% of their invested
+              capital
+            </li>
+          </ul>
+        </section>
+        <section className="md:px-20 px-8 lg:px-20 xl:px-36 py-14 font-inter overflow-hidden">
+          <div className="md:flex justify-between items-center">
+            <div className=" mb-10 md:mb-0">
+              <h2
+                data-aos="fade-right"
+                data-aos-duration="1000"
+                className="text-4xl lg:text-4xl xl:text-5xl font-bold  "
+              >
+                Partner & <span className="text-[#9ECD54]">Team</span>
+              </h2>
+              <p className="text-xl text-[#4b4b4b]">
+                Collaborative Excellence : Driving Success
+              </p>
+            </div>
+            <div className="flex flex-col lg:flex-row gap-5  ">
+              <img
+                src={img1}
+                data-aos="flip-right"
+                data-aos-duration="1000"
+                alt=""
+                className="lg:w-[250px] xl:w-auto"
+              />
+              <img
+                src={img2}
+                alt=""
+                data-aos="flip-left"
+                data-aos-duration="1000"
+                className="lg:w-[250px] xl:w-auto"
+              />
+            </div>
+          </div>
+        </section>
+        <FossFields />
+        <PastOpportunity />
+        <Table />
+        <WhySioux />
+        <ClientTestimonial />
+        <SitePlan />
+        {/* <Gallery /> */}
+        <div className=" px-8 md:px-36 py-24 font-inter bg-[#D6F0AD] bg-opacity-30 overflow-hidden">
           <h2
             data-aos="fade-down"
             data-aos-duration="1000"
@@ -179,9 +200,9 @@ const LandingPage = () => {
             </div>
           </div>
         </div>
-        <Founder/>
-      <LatestProject />
-      {showModal && (
+        <Founder />
+        <LatestProject />
+        {/* {showModal && (
         <div className="modal transition-opacity transform ease-in-out duration-1000  fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
           <div className=" bg-black relative  bg-opacity-70 border  border-[#9ECD54]  lg:h-4/5 p-14 md:flex gap-5 md:w-[90%] lg:w-3/4 items-center">
             <div className="md:w-[50%] hidden sm:block">
@@ -264,10 +285,16 @@ const LandingPage = () => {
             </svg>
           </div>
         </div>
-      )}
+      )} */}
 
-      <Contact />
-      <Footer />
+        <Contact />
+        <Footer />
+        <button
+          onClick={handleschedule}
+          className="bg-[#1a94c2] animate-bounce sticky z-50 bottom-8 left-8 rounded-lg text-white  py-4 px-6 mb-8 hover:bg-black border "
+        >
+          Schedule a call
+        </button>
       </div>
     </>
   );

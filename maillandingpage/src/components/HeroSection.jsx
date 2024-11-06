@@ -3,6 +3,13 @@ import React, { useState, useEffect, useRef } from "react";
 const HeroSection = () => {
   // const [showModal, setShowModal] = useState(false);
   const formRef = useRef(null);
+  const [loading, setLoading] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [name ,setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
+  const [city, setCity] = useState("");
+
 
   // Function to handle the 'Invest Now' button click
   const handleInvestNow = () => {
@@ -10,6 +17,22 @@ const HeroSection = () => {
     if (contactSection) {
       contactSection.scrollIntoView({ behavior: "smooth" });
     }
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setLoading(true); // Show loading spinner on submit
+
+    // Simulate an API call with a timeout
+    setTimeout(() => {
+      setLoading(false); // Hide loading spinner after submission is complete
+      setIsSubmitted(true);
+      setName("");
+      setEmail("");
+      setPhone("");
+      setCity("");
+      setTimeout(() => setIsSubmitted(false), 5000);
+    }, 2000); // Adjust this duration as needed
   };
 
   // Function to handle the download button click (to show the form)
@@ -46,7 +69,7 @@ const HeroSection = () => {
   // }, [showModal]);
 
   return (
-    <div className=" bg-center bg-cover bg-black bg-opacity-75 sm:bg-bg ">
+    <div className=" bg-center bg-cover bg-black bg-opacity-75 sm:bg-bg overflow-hidden">
       <div className="font-inter py-8 md:px-20 px-8 lg:px-20 xl:px-36 bg-black bg-opacity-50 flex flex-col gap-20">
         <div className="form sm:bg-none md:flex items-center gap-4 justify-between">
           <div className="sm:bg-none  bg-cover text-white bg-bottom text lg:w-2/3 xl:w-1/2 flex flex-col justify-center">
@@ -87,13 +110,15 @@ const HeroSection = () => {
             <h1 className="text-2xl mb-4 font-bold">
               Speak With An Expert Investment Manager
             </h1>
-            <form className="flex flex-col">
+            <form onSubmit={handleSubmit} className="flex flex-col">
               <label className="text-lg font-medium">
                 Full Name<span className="text-red-500">*</span>
               </label>
               <input
                 type="text"
+                value={name}
                 placeholder="Type Here"
+                onChange={(e)=> setName(e.target.value)}
                 required
                 className="mb-4 p-3 text-base border border-gray-300 rounded-lg"
               />
@@ -103,6 +128,8 @@ const HeroSection = () => {
               </label>
               <input
                 type="email"
+                value={email}
+                onChange={(e)=> setEmail(e.target.value)}
                 placeholder="Type Here"
                 required
                 className="mb-4 p-3 text-base border border-gray-300 rounded-lg"
@@ -115,26 +142,42 @@ const HeroSection = () => {
                 <input
                   className="phonenumber flex-1 w-full border border-gray-300 rounded-lg p-3"
                   type="tel"
+                  value={phone}
+                  onChange={(e)=>setPhone(e.target.value)}
                   placeholder="Phone Number"
                   required
                 />
               </div>
               <label className="text-lg font-medium">
-                City<span className="text-red-500">*</span>
+                City
               </label>
               <input
                 type="text"
+                value={city}
+                onChange={(e)=>setCity(e.target.value)}
                 placeholder="Type Here"
-                required
                 className="mb-4 p-3 text-base border border-gray-300 rounded-lg"
               />
 
               <button
                 type="submit"
-                className="bg-black text-white py-3 px-8 rounded-lg border-none mt-4"
+                className="bg-black text-white py-3 px-8 rounded-lg border-none mt-4 flex items-center justify-center"
+                disabled={loading}
               >
-                Submit
+                {loading ? (
+                  <>
+                    <span className="loader animate-spin border-4 border-t-transparent border-white rounded-full h-5 w-5 mr-4"></span>
+                    Submitting...{" "}
+                  </>
+                ) : (
+                  "Submit"
+                )}
               </button>
+              {isSubmitted && (
+              <p className="text-[#9ECD54] mt-4 font-medium">
+                Form submitted successfully! Thank you for reaching out.
+              </p>
+            )}
             </form>
           </div>
         </div>

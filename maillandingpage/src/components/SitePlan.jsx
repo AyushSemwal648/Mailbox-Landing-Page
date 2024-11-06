@@ -45,7 +45,7 @@ const SitePlan = () => {
   };
 
   return (
-    <section className="px-8 md:px-36 py-24 flex flex-col justify-center ">
+    <section className="px-8 md:px-36 py-24 flex flex-col justify-center overflow-hidden">
       <h2
         data-aos="fade-down"
         data-aos-duration="1000"

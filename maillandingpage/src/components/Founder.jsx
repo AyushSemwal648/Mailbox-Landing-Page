@@ -2,7 +2,7 @@ import React from "react";
 
 const Founder = () => {
   return (
-    <div className="px-8 md:px-36 py-24 flex flex-col justify-center items-center">
+    <div className="px-8 md:px-36 py-24 flex flex-col justify-center items-center overflow-hidden">
       <h1 className="text-center text-5xl font-bold mb-14">
         A Message from the <span className="text-[#9ECD54]">Founder</span>
       </h1>
