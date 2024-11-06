@@ -1,6 +1,7 @@
 import React from "react";
 import img3 from "../assets/image.png";
 import img4 from "../assets/img3.png";
+import location from "../assets/location.svg.png"
 
 const FossFields = () => {
 
