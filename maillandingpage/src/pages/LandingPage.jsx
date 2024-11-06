@@ -126,6 +126,9 @@ const LandingPage = () => {
               Investors get 2024 and 2025 tax breaks: ~20% of their invested
               capital
             </li>
+            <li>
+              <span className="font-bold">Proven Business Model: </span>Development process (evidenced by Phase I) builds fast, leases fast, gets favorable loans
+            </li>
           </ul>
         </section>
         <section className="md:px-20 px-8 lg:px-20 xl:px-36 py-14 font-inter overflow-hidden">

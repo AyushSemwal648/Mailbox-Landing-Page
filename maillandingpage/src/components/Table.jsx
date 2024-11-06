@@ -34,7 +34,7 @@ const Table = () => {
               </tr>
             </thead>
             <tbody>
-              <tr className="bg-[#9ECD54] text-white">
+              <tr className="bg-[#9ECD54] text-white text-left ">
                 <td className="p-2 md:p-4">
                   <div className="font-bold">Class A</div>
                   <div className="text-xs md:text-sm">$50K - $75K Investment</div>
