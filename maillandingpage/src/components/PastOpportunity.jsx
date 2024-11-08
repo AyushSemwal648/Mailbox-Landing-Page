@@ -58,7 +58,7 @@ const PastOpportunity = () => {
                 <div className="relative h-[40%] mb-4 rounded-t-lg ">
                   <img src={img9} alt="" className="h-full w-full rounded-t-lg" />
                   <p className="px-3 py-1 rounded-xl absolute top-2 right-4  bg-red-600 text-white">
-                    sold
+                    Full Funded
                   </p>
                 </div>
                 <div className="px-8 pb-4">
@@ -92,7 +92,7 @@ const PastOpportunity = () => {
               <div className="relative h-[40%] mb-4 rounded-t-lg">
               <img src={img10} alt="" className="h-full w-full rounded-t-lg" />
               <p className="px-3 py-1 rounded-xl absolute top-2 right-4  bg-red-600 text-white">
-                sold
+                Full Funded
               </p>
             </div>
                 <div className="px-8 pb-4">
@@ -125,7 +125,7 @@ const PastOpportunity = () => {
               <div className="relative h-[40%] mb-4 rounded-t-lg">
               <img src={img11} alt="" className="h-full w-full rounded-t-lg" />
               <p className="px-3 py-1 rounded-xl absolute top-2 right-4  bg-red-600 text-white">
-                sold
+                Full Funded
               </p>
             </div>
                 <div className="px-8 pb-4 ">
@@ -187,7 +187,7 @@ const PastOpportunity = () => {
             <div className="relative h-[40%] mb-4 rounded-t-lg">
               <img src={img9} alt="" className="h-full w-full rounded-t-lg" />
               <p className="px-3 py-1 rounded-xl absolute top-2 right-4  bg-red-600 text-white">
-                sold
+                Full Funded
               </p>
             </div>
             <div className="px-8 pb-2">
@@ -222,7 +222,7 @@ const PastOpportunity = () => {
             <div className="relative h-[40%] mb-4 rounded-t-lg">
               <img src={img10} alt="" className="h-full w-full rounded-t-lg" />
               <p className="px-3 py-1 rounded-xl absolute top-2 right-4  bg-red-600 text-white">
-                sold
+                Full Funded
               </p>
             </div>
             <div className="px-8 pb-2">
@@ -255,7 +255,7 @@ const PastOpportunity = () => {
             <div className="relative h-[40%] mb-4 rounded-t-lg">
               <img src={img11} alt="" className="h-full w-full rounded-t-lg" />
               <p className="px-3 py-1 rounded-xl absolute top-2 right-4  bg-red-600 text-white">
-                sold
+                Full Funded
               </p>
             </div>
             <div className="px-8 pb-2 ">
