@@ -63,7 +63,7 @@ const PastOpportunity = () => {
                 </div>
                 <div className="px-8 pb-4">
                   <h3 className="mb-2 text-xl font-medium">
-                    Briarwood Reserve Phase 2
+                    Briarwood Reserve Phase 1
                   </h3>
                   <div className="flex gap-2 text-sm mb-9">
                     <img src={location} alt="" className="" />
@@ -192,7 +192,7 @@ const PastOpportunity = () => {
             </div>
             <div className="px-8 pb-2">
               <h3 className="mb-2 text-xl font-medium">
-                Briarwood Reserve Phase 2
+                Briarwood Reserve Phase 1
               </h3>
               <div className="flex gap-2 text-sm mb-9">
                 <img src={location} alt="" className="" />
