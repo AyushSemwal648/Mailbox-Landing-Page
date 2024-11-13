@@ -1,4 +1,6 @@
 import React, {useState} from 'react'
+import { useNavigate } from 'react-router-dom';
+import emailjs from 'emailjs-com';
 
 
 const Contact = () => {
@@ -8,13 +10,30 @@ const Contact = () => {
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
   const [city, setCity] = useState("");
+  const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
     setLoading(true); // Show loading spinner on submit
 
-    // Simulate an API call with a timeout
-    setTimeout(() => {
+    // Define the template parameters for EmailJS
+    const templateParams = {
+      from_name: name,
+      name,
+      email,
+      phone,
+      state: city, // Map 'city' to 'state' for the template
+    };
+
+    // Send email using EmailJS
+    emailjs.send(
+      'service_50gog5c', // replace with your EmailJS service ID
+      'template_a76avl7', // replace with your EmailJS template ID
+      templateParams,
+      '1Syzwm4o4ohzImUq8' // replace with your EmailJS user ID
+    )
+    .then((response) => {
+      console.log('SUCCESS!', response.status, response.text);
       setLoading(false); // Hide loading spinner after submission is complete
       setIsSubmitted(true);
       setName("");
@@ -22,8 +41,17 @@ const Contact = () => {
       setPhone("");
       setCity("");
       setTimeout(() => setIsSubmitted(false), 5000);
-    }, 2000); // Adjust this duration as needed
-  };
+
+      // Redirect to the Thank You page
+      console.log('Navigating to /thank-you'); // Log this for debugging
+  navigate('/thank-you');
+    })
+    .catch((error) => {
+      console.error('EmailJS failed:', error.text);  // Log the error message
+      setLoading(false); // Hide the loading spinner if there's an error
+    });
+    
+};
 
   return (
     <>
@@ -79,7 +107,7 @@ const Contact = () => {
               </div>
             </div>
             <label className="text-lg font-medium">
-               City
+               Region
             </label>
             <input
               type="text"
