@@ -19,7 +19,7 @@ const PastOpportunity = () => {
 
   return (
     <>
-      <section className="px-10 md:px-20 lg:px-20 xl:px-36 py-24 font-inter overflow-hidden">
+      <section id="past-opportunity" className="px-10 md:px-20 lg:px-20 xl:px-36 py-24 font-inter overflow-hidden">
         <h2
           data-aos="fade-down"
           data-aos-duration="1000"

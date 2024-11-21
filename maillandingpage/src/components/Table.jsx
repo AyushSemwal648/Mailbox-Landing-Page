@@ -10,7 +10,7 @@ const Table = () => {
 
   return (
     <div className="w-full">
-      <div className="w-full  bg-[#D6F0AD] bg-opacity-30 px-4 md:px-10 lg:px-20 xl:px-36 py-16 md:py-24 flex flex-col justify-center">
+      <div id="projects-return" className="w-full  bg-[#D6F0AD] bg-opacity-30 px-4 md:px-10 lg:px-20 xl:px-36 py-16 md:py-24 flex flex-col justify-center">
         <h2
           data-aos="fade-right"
           data-aos-duration="1000"

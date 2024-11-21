@@ -101,7 +101,7 @@ const LandingPage = () => {
           </div>
         </div>
         <HeroSection />
-        <section className="project bg-black py-14 px-8 md:px-20 lg:px-20 xl:px-36 font-inter overflow-hidden">
+        <section id="about-project" className="project bg-black py-14 px-8 md:px-20 lg:px-20 xl:px-36 font-inter overflow-hidden">
           <h2
             data-aos="fade-right"
             data-aos-duration="1000"
@@ -170,7 +170,7 @@ const LandingPage = () => {
         <ClientTestimonial />
         <SitePlan />
         {/* <Gallery /> */}
-        <div className=" px-8 md:px-36 py-24 font-inter bg-[#D6F0AD] bg-opacity-30 overflow-hidden">
+        <div id="teams" className=" px-8 md:px-36 py-24 font-inter bg-[#D6F0AD] bg-opacity-30 overflow-hidden">
           <h2
             data-aos="fade-down"
             data-aos-duration="1000"

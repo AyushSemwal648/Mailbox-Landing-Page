@@ -23,7 +23,7 @@ const FossFields = () => {
   };
   return (
     <>
-      <section className="px-8 md:px-20 lg:px-20 xl:px-36 py-24 bg-black flex flex-col lg:flex-row lg:items-center gap-10 font-inter overflow-hidden">
+      <section id="jr-phase-2" className="px-8 md:px-20 lg:px-20 xl:px-36 py-24 bg-black flex flex-col lg:flex-row lg:items-center gap-10 font-inter overflow-hidden">
         <div className="lg:w-2/3">
           <h2
             data-aos="fade-right"
